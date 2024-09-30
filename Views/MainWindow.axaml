@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:vm="using:Slick.ViewModels"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="500"
+				x:Class="Slick.Views.MainWindow"
+				x:DataType="vm:MainWindowViewModel"
+				Icon="/Assets/avalonia-logo.ico"
+				Title="Slick">
+		<Design.DataContext>
+				<vm:MainWindowViewModel/>
+		</Design.DataContext>
+
+	<StackPanel>
+
+		<Border Margin="5" CornerRadius="10"
+						Background="LightBlue">
+			<TextBlock Margin="5" HorizontalAlignment="Left" Text="Slick"></TextBlock>
+		</Border>
+    
+		<TextBlock Margin="5" HorizontalAlignment="Left" x:Name="ClockText"/>
+      <ToggleButton Click="AutoDarkMode">Automatic</ToggleButton>
+    <ToggleButton Click="ToggleDarkMode">DarkMode</ToggleButton>
+	
+  
+		<Button Background="Blue" Content="Hello World"/>
+  
+  </StackPanel>
+
+</Window>
